@@ -1,0 +1,25 @@
+name: Submit Assignment and Run Grader
+permissions:
+  id-token: write 
+  contents: read 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  grade:
+    name: Submit and Grade Assignment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          path: submission
+
+      - name: Collect Submission and Run Grader
+        uses: neu-se/autograder-action@main
+        with:
+          grading_server: 'https://khoury-classroom-dev.ngrok.pizza'
