@@ -40,4 +40,7 @@ public class EntrypointTest {
         assertEquals(11, entrypoint.getMessage().length());
     }
 
+    /*
+     * TODO: Implement tests for doMath
+     */
 } 

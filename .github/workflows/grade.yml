@@ -1,7 +1,7 @@
 name: Submit Assignment and Run Grader
 permissions:
-  id-token: write 
-  contents: read 
+  id-token: write
+  contents: read
 
 on:
   push:
@@ -22,4 +22,5 @@ jobs:
       - name: Collect Submission and Run Grader
         uses: neu-se/autograder-action@main
         with:
-          grading_server: 'https://khoury-classroom-dev.ngrok.pizza'
+          grading_server: 'https://api.pawtograder.com'
+          handout_repo: 'pawtograder/example-assignment-java-handout'
