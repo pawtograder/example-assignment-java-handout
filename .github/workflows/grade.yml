@@ -24,3 +24,5 @@ jobs:
         with:
           grading_server: 'https://api.pawtograder.com'
           handout_repo: 'pawtograder/example-assignment-java-handout'
+          action_ref: '${{ github.action_ref }}'
+          action_repository: '${{ github.action_repository }}'
